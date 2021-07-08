@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <title>Library</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to The Library</h1>
+    <a id="add-btn" class="btn"><span class="icon"><i class="fas fa-plus-circle"></i></span><span>add book</span></a>
+  </header>
+
+  <div id="form-container" class="overlay hide">
+    <form id="book-form" action="" class="">
+      <a class="close-btn" href="#"><i class="fas fa-times-circle"></i></a>
+      <div class="field">
+        <label class="label" for="author">Author:</label>
+        <div class="input-container">
+          <input type="text" name="author" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="title">Title:</label>
+        <div class="input-container">
+          <input type="text" name="title" id="title" required>
+        </div>
+      </div>
+    
+      <div id="number-field" class="field flex-field">
+        <label class="label" for="num-pages">Number of pages:</label>
+        <div class="input-container">
+          <input type="number" name="num-pages" id="num-pages" min="1" required>
+        </div>
+      </div>
+    
+      <div id="switch-field" class="field flex-field">
+        <label class="label" for="read">Have you read the book?:</label>
+        <div class="input-container">
+          <input type="checkbox" name="read" id="read">
+        </div>
+      </div>
+      <input class="btn" type="submit" value="New book">
+    </form>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Author</th>
+          <th scope="col">Title</th>
+          <th scope="col">Number of pages</th>
+          <th scope="col">Read?</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  <script src="book.js"></script>
+
+</body>
+
+</html>
