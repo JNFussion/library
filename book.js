@@ -4,19 +4,22 @@ const addBookButton = document.getElementById('add-btn');
 const closeButton = document.querySelector('.close-btn');
 const form = document.getElementById('book-form');
 
-function Book(title, author, num_pages, read) {
-  this.title = title;
-  this.author = author;
-  this.num_pages = num_pages;
-  this.read = read;
+class Book {
+  title;
+  author;
+  num_pages;
+  read;
 
-  this.swapRead = function() {
-    this.read = !this.read;
+  constructor(title, author, num_pages, read) {
+    this.title = title;
+    this.author = author;
+    this.num_pages = num_pages;
+    this.read = read;
   }
 
-/*   this.info = function() {
-    return read ? `${title} by ${author}, ${num_pages} pages, read.` : `${title} by ${author}, ${num_pages} pages, not read yet`;
-  } */
+  swapRead = function() {
+    this.read = !this.read;
+  }
 }
 
 /* GET DATA FROM FORM, CREATE A NEW BOOK AND ADD IT TO THE LIBRARY */
